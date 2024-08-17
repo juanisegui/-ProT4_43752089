@@ -28,9 +28,13 @@ class LibroController {
     }
 
     async add(req, res) {
+        try {
         const libro = req.body;
         const [result] = await pool.query(`INSERT INTO libros(nombre, autor, categoria, año_publicacion, ISBN) VALUES (?, ?, ?, ?, ?)`, [libro.nombre, libro.autor, libro.categoria, libro.año_publicacion, libro.ISBN]);
         res.json({"Id insertado": result.insertId});
+        } catch (error) {
+            console.log('Error al añadir el libro', error);
+        }
     }
 
     async delete(req, res) {
