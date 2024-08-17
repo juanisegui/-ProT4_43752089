@@ -48,9 +48,13 @@ class LibroController {
     }
 
     async update(req, res) {
+        try {
         const libro = req.body;
         const [result] = await pool.query(`UPDATE libros SET nombre=(?), autor=(?), categoria=(?), año_publicacion=(?), ISBN=(?) WHERE id=(?)`, [libro.nombre, libro.autor, libro.categoria, libro.año_publicacion, libro.ISBN]);
         res.json({"Registros actualizados": result.changedRows });
+        } catch (error) {
+            console.log('Error al editar el libro', error);
+        }
     }
 
 }
