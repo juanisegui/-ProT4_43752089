@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-08-2024 a las 23:48:54
+-- Tiempo de generación: 24-08-2024 a las 21:26:22
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.1.25
 
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `libros`
 --
--- Creación: 17-08-2024 a las 19:47:38
--- Última actualización: 17-08-2024 a las 20:04:09
+-- Creación: 24-08-2024 a las 18:52:54
+-- Última actualización: 24-08-2024 a las 18:59:52
 --
 
 CREATE TABLE `libros` (
@@ -44,8 +44,9 @@ CREATE TABLE `libros` (
 --
 
 INSERT INTO `libros` (`id`, `nombre`, `autor`, `categoria`, `año_publicacion`, `ISBN`) VALUES
-(1, 'Libro de Prueba', 'Pedro Gómez', 'Comedia', '2020', '2730589374500'),
-(2, 'Biografía de Juan Márquez', 'Nicolás Hahl', 'No Ficción', '2014', '2857289365600');
+(1, 'Prueba', 'Autor', 'Categoría', '2012', '1234567890123'),
+(2, 'Biografía de Juan Márquez', 'Nicolás Hahl', 'No Ficción', '2014', '2857289365600'),
+(3, 'Esta es la prueba 3', 'Pedro García', 'Comedia', '2004', '105830589274');
 
 --
 -- Índices para tablas volcadas
@@ -65,7 +66,7 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
