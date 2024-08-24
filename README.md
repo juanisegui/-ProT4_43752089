@@ -11,3 +11,14 @@ Postman.
 	2. Se modificó el tipo de dato de la variable "año_publicacion" de DATE a YEAR. 
 Esto debido a que el tipo DATE requiere especificar la fecha y hora exacta actual, al contrario 
 del tipo YEAR, que solamente detalla el año.
+
+	3. Para utilizar el método "update", se debe especificar el "id" del elemento a modificar
+al final de la sentencia. Ejemplo:
+{
+	"nombre": "-",
+	"autor": "-",
+	"categoria": "-",
+	"año_publicacion": AAAA,
+	"ISBN": "1234567890123"
+	"id": (id del elemento a modificar)
+}
